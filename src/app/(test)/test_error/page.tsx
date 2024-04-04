@@ -1,18 +1,12 @@
 import Link from "next/link";
-import { ErrorAction } from "./error_action";
+import { ErrorAction } from "@/app/components/action/error_action";
+import FormButton from "@/app/components/form_button";
 
 export default function TestError() {
   return (
     <>
       <div>Test Error page!!</div>
-      <form action={ErrorAction}>
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Call Error Action!
-        </button>
-      </form>
+      <FormButton action={ErrorAction} />
       <Link href="/">Home</Link>
     </>
   );
