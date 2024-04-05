@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Hey! I'm a title!",
+      "text": "This is a text. It's a very good text. It's the best text. It's a text that will make you cry. It's a text that will make you laugh. It's a text that will make you feel. It's a text that will make you think",
+      "date": "2024/04/05"
+    },
+    {
+      "id": 2,
+      "title": "2nd article",
+      "text": "This is a second article. Do you might love this blog? I hope so.",
+      "date": "2024/04/06"
+    },
+    {
+      "id": 3,
+      "title": "Third article",
+      "text": "I'm sorry, I'm not very creative",
+      "date": "2024/04/07"
+    }
+  ]
+}
