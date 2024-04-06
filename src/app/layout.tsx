@@ -11,12 +11,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  part_a,
+  part_b,
 }: Readonly<{
   children: React.ReactNode;
+  part_a: React.ReactNode;
+  part_b: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <div className="grid place-items-center grid-cols-2 auto-cols-max">
+          <div className="py-5 bg-cyan-900 w-full text-center">{part_a}</div>
+          <div className="py-5 bg-green-900 w-full text-center">{part_b}</div>
+        </div>
+      </body>
     </html>
   );
 }
