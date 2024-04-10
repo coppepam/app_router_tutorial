@@ -2,17 +2,17 @@ import Link from "next/link";
 import { type Article, ARTICLE_ENDPOINT } from "../components/articles";
 
 export async function generateStaticParams() {
-  const articles = await fetch(ARTICLE_ENDPOINT).then((res) => res.json());
+  const res = await fetch(ARTICLE_ENDPOINT);
+  const articles = await res.json();
 
   return articles.map(({ id }: Article) => ({
-    id,
+    id: id.toString(),
   }));
 }
 
 async function getArticleDetail(id: Pick<Article, "id">): Promise<Article> {
-  const article = await fetch(`${ARTICLE_ENDPOINT}?id=${id}`).then((res) =>
-    res.json()
-  );
+  const res = await fetch(`${ARTICLE_ENDPOINT}?id=${id}`);
+  const article = await res.json();
 
   return article[0];
 }

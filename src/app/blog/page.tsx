@@ -2,7 +2,8 @@ import Link from "next/link";
 import { type Article, ARTICLE_ENDPOINT } from "./components/articles";
 
 async function getArticles(): Promise<Article[]> {
-  const articles = await fetch(ARTICLE_ENDPOINT).then((res) => res.json());
+  const res = await fetch(ARTICLE_ENDPOINT);
+  const articles = await res.json();
 
   return articles;
 }
