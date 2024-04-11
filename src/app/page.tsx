@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { ErrorAction } from "@/app/components/action/error_action";
