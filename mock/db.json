@@ -19,5 +19,5 @@
       "date": "2024/04/07"
     }
   ],
-  "test": "This is Test!"
+  "test": { "message": "This is Test!" }
 }
